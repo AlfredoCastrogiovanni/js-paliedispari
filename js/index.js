@@ -26,8 +26,14 @@ oddOrEvenButton.addEventListener("click", function () {
     }
 });
 
-// Palindrome
+// PALINDROME
 const palindromeButton = document.getElementById("palindrome");
+
+palindromeButton.addEventListener("click", function () {
+    const userWord = prompt("Inserisci la parola: ").toLowerCase().trim();
+    ispalindrome(userWord) ? alert("La parola inserita è palindroma") : alert("La parola inserita non è palindroma");
+});
+
 
 // ==================== FUNCTIONS ====================
 
@@ -37,4 +43,15 @@ function generateRandomNumber(min, max) {
 
 function oddOrEven(a) {
     return a % 2 == 0 ? true : false;
+}
+
+function ispalindrome(word) {
+    let j = word.length - 1;
+    for(let i=0; i< word.length; i++) {
+        if(word[i] != word[j]) {
+            return false;
+        }
+        j--;
+    }
+    return true;
 }
