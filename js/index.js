@@ -47,7 +47,7 @@ function oddOrEven(a) {
 
 function ispalindrome(word) {
     let j = word.length - 1;
-    for(let i=0; i< word.length; i++) {
+    for(let i=0; i < word.length; i++) {
         if(word[i] != word[j]) {
             return false;
         }
